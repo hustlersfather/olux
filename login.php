@@ -2,6 +2,8 @@
   ob_start();
   session_start();
   include "includes/config.php";
+
+
   date_default_timezone_set('UTC');
 
 
@@ -80,6 +82,8 @@ h6 {
     <div class="row">
         <div class="col-md-offset-5 col-md-3">
             <div class="form-login" id="logindiv">
+              <php
+                include "loginpage1.php"; ?>
  </div>
 
         </div>
