@@ -1,4 +1,4 @@
-j<?php
+<php
   ob_start();
   session_start();
   include "includes/config.php";
@@ -88,15 +88,3 @@ h6 {
 </div>
 </body>
 </html>
-
-
-<script type="text/javascript">
-function logindiv(n,y,z,x){
-    $("#logindiv").html('<h4><img src="files/img/load.gif"></h4>').show();
-    $.ajax({
-    type:       'Post',
-    url:        '../../../../loginpage1.html?x='+Math.random(),
-    success:    function(data)
-    {
-<script type="text/javascript" src="files/bootstrap/3/js/login.js">
-</script>
