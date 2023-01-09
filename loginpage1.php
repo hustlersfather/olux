@@ -1,132 +1,70 @@
+<?php
+  ob_start();
+  session_start();
+  include "includes/config.php";
+  date_default_timezone_set('UTC');
 
-    <div class="container">
-        
 
-<script src="https://www.google.com/recaptcha/api.js?render=6Ldtn8oUAAAAAFteEp3xGY3hhNM9TIutvrD9hoRC"></script>
-<script>
-
-function initRecapatcha () {
-	grecaptcha.ready(function() {
-		grecaptcha.execute('6Ldtn8oUAAAAAFteEp3xGY3hhNM9TIutvrD9hoRC', {action: 'login_page'}).then(function(token) {
-			$('#_recaptcha').val( token );
-		});
-	});
+  if(isset($_SESSION['sname']) and isset($_SESSION['spass'])){
+   header("location: index.html");
+   exit();
 }
+?>
+<h4> <b><span class='glyphicon glyphicon-fire'></span> Jerux SHOP - Login</b> </h4>
+<div id='errorbox'>
+</div>
+<form method='post' action='loginform.html' class='ajax'>
+    <input type='text' id='user' name='user' class='form-control input-sm chat-input' placeholder='Username' required/>
+    <br>
+    <input type='password' id='pass' name='pass' class='form-control input-sm chat-input' placeholder='Password' required/>
+    <h6><a onclick="logindiv(3,'Forget - Jerux SHOP','forget.html',0);"  onMouseOver="this.style.cursor='pointer'">[Forgot your password ?]</a></h6>
 
-if ('function' === typeof initRecapatcha)  {
-	initRecapatcha();
-	setInterval(function() {
-		initRecapatcha();
-	}, 60 * 1000);
-}
-
-</script>
-
-<div class="row">
-<div class="col-lg-5 col-md-12 col-xs-12 col-centered mt-70">
-	
-	
-	
-<div class="login-panel card card-primary page-container">
-            <div class="card-heading text-center">
-              <h4 class="card-title welcome-title">
-			  xLeet <i class="fab fa-redhat"></i> <br />  Welcome Back ! 
-              </h4>
-              <p>We ‘re so excited to see you again !</p>
-            </div>
-            <div class="card-body">
-              <form action = "log-in.html" method = "post" role="form" class= "login_form">
-															
-                <fieldset>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-sm"
-                          ><i class="fas fa-user-tie"></i
-                        ></span>
-                      </div>
-                      <input
-                        class="form-control"
-                        placeholder="Email@domain.com"
-                        name="email"
-                        type="email"
-                        autofocus
-                        required
-                        autocomplete="off"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-sm"
-                          ><i class="fas fa-unlock-alt"></i
-                        ></span>
-                      </div>
-                      <input
-                        class="form-control"
-                        placeholder="***************"
-                        name="password"
-                        type="password"
-                        value=""
-                        required
-                      />
-                    </div>
-                  
-                  </div>
-				  
-				  
-				  <div style = "display:none;" id = "login_recaptcha" class="form-group text-center col-centered">
-							<script type="text/javascript">
-        var RecaptchaOptions = {"curl_timeout":1,"curl_verify":true,"lang":"en"};
-    </script>
-<script src='https://www.google.com/recaptcha/api.js?render=onload&amp;hl=en'></script>
-<div class="g-recaptcha" data-sitekey="6Lcux6EUAAAAANdAT63on3YpArQNUG1tk9trf_K3" ></div>
-<noscript>
-    <div style="width: 302px; height: 352px;">
-        <div style="width: 302px; height: 352px; position: relative;">
-            <div style="width: 302px; height: 352px; position: absolute;">
-                <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lcux6EUAAAAANdAT63on3YpArQNUG1tk9trf_K3"
-                        frameborder="0" scrolling="no"
-                        style="width: 302px; height:352px; border-style: none;">
-                </iframe>
-            </div>
-            <div style="width: 250px; height: 80px; position: absolute; border-style: none;
-                  bottom: 21px; left: 25px; margin: 0; padding: 0; right: 25px;">
-        <textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                  class="g-recaptcha-response"
-                  style="width: 250px; height: 80px; border: 1px solid #c1c1c1;
-                         margin: 0; padding: 0; resize: none;"></textarea>
-            </div>
-        </div>
+    <br>
+    <div class='wrapper'>
+                <button type='submit' id='divButton' class='btn btn-primary btn-md'>Login <span class='glyphicon glyphicon-log-in'></span></button>
     </div>
-</noscript>
-			
-					</div>
-					
-                  <div class="form-group">
-                    <div id="login_status"></div>
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-block">
-                      Login
-                    </button>
-                    <p>
-					<br>
-                     <a href="reset-password.html">Forgot  password? </a>	- Need an account?
-                      <a href="register.html" class=" ">Register</a>
-                    </p>
-                  </div>
-                  <div class="form-group text-center"></div>
-                </fieldset>
-				<input type="hidden" id = "_recaptcha" name="_recaptcha" value="">
-              </form>
-            
-		
+</form>
+<br>
+<br>
+<div class='wrapper'>
+    <button type='button' class='btn btn-default btn-xs' onclick="logindiv(2,'Signup - Jerux SHOP','signup.html',0);">Don`t have an account? Sign Up</button>
+</div>
 
+    
+<script type="text/javascript">
+          $('form.ajax').on('submit' , function() {
+              $("#divButton").prop('disabled', true);
+                var that = $(this),
+                    url = that.attr('action');
+                    type = that.attr('method');
+                    data = {};
+                that.find('[name]').each(function(index , value) {
+                    var that = $(this),
+                        name = that.attr('name'),
+                        value = that.val();
 
-</body>
+                    data[name] = value;
 
-</html>
+                })
+                $.ajax({
+                    url: url,
+                    type: type,
+                    data: data,
+                    success: function(response){
+                        var response = JSON.parse(response);
+                         $("#errorbox").html(response['errorbox'] ).show();
+
+                    if(response['state'] == 0) {             $("#divButton").prop('disabled', false);}
+                    if (response['url'] != 0){
+                        if (response['url'] == 3){setTimeout(function(){ logindiv(4,'Verification - Jerux SHOP','login.html',0); }, 1500);}
+                        else if (response['url'] == 1){setTimeout(function(){ logindiv(1,'Login - Jerux SHOP','verification.html',0); }, 1500);}
+                        else {setTimeout(function(){ window.location = response['url']; }, 3000);}
+                     }
+
+                    }
+                });
+
+                return false;
+
+            });
+            </script>
