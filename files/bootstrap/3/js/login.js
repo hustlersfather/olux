@@ -1,11 +1,5 @@
 
-function logindiv(n,y,z,x){
-    $("#logindiv").html('<h4><img src="files/img/load.gif"></h4>').show();
-    $.ajax({
-    type:       'Post',
-    url:        '../../../../loginpage1.html?x='+Math.random(),
-    success:    function(data)
-    {
+
         
         $("#logindiv").html(data).show();
         var obj = { Title: y, Url: z };
