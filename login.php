@@ -82,7 +82,7 @@ h6 {
     <div class="row">
         <div class="col-md-offset-5 col-md-3">
             <div class="form-login" id="logindiv">
-              <php
+              <?php
                 include "loginpage1.php"; ?>
  </div>
 
