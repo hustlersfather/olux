@@ -12,7 +12,7 @@ RewriteRule ^loginpage3.html$  loginpage3.php
 RewriteRule ^loginform.html$  loginform.php
 RewriteRule ^signupform.html$  signupform.php
 RewriteRule ^passform.html$  passform.php
-RewriteRule ^index.html$  index.php
+RewriteRule ^homepage$  index.php
 RewriteRule ^ajaxinfo.html$  ajax.php
 RewriteRule ^mailer.html$  mailer.php
 RewriteRule ^shell.html$  shell.php
