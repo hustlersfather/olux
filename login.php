@@ -13,7 +13,7 @@
 }
 ?>
 
-<?php include "loginpage.php"; ?>
+<?php include "loginpage1.php"; ?>
 
 
 
