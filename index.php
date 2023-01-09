@@ -151,7 +151,7 @@ $(window).on("popstate", function(e) {
 
 $(window).on('load', function() {
 $('.dropdown').hover(function(){ $('.dropdown-toggle', this).trigger('click'); });
-   pageDiv(0,'Main - AlhwaShop','index.html',1);
+   pageDiv(0,'Main - AlhwaShop','homepage',1);
    var clipboard = new Clipboard('.copyit');
     clipboard.on('success', function(e) {
       setTooltip(e.trigger, 'Copied!');
@@ -185,7 +185,7 @@ function hideTooltip(btn) {
   <div class="container-fluid">
     <div class="navbar-header">
        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-    <div class="navbar-brand" onClick="location.href='index.html'" onMouseOver="this.style.cursor='pointer'"><b><span class="glyphicon glyphicon-fire"></span> Alhwa SHOP <small><span class="glyphicon glyphicon-refresh"></span></small></b></div></div>
+    <div class="navbar-brand" onClick="location.href='homepage'" onMouseOver="this.style.cursor='pointer'"><b><span class="glyphicon glyphicon-fire"></span> Alhwa SHOP <small><span class="glyphicon glyphicon-refresh"></span></small></b></div></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="topFixedNavbar1">
       <ul class="nav navbar-nav">
