@@ -123,14 +123,8 @@ if ('function' === typeof initRecapatcha)  {
                 </fieldset>
 				<input type="hidden" id = "_recaptcha" name="_recaptcha" value="">
               </form>
-            </div>
-          </div>
-        </div>
+            
 		
-	
-</div>
-
-    </div>
 
 
 </body>
