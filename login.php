@@ -25,48 +25,6 @@
 <meta charset="utf-8">
 <title>Jerux SHOP</title>
 <style>
-@import url(https://fonts.googleapis.com/css?family=Roboto:400);
-html, body {
-    background: url(files/img/bg.png);
-}
-
-.container {
-    padding: 25px;
-    position: fixed;
-}
-
-.form-login {
-    background-color: #EDEDED;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-    border-color:#d2d2d2;
-    border-width: 5px;
-    box-shadow:0 1px 0 #cfcfcf;
-}
-
-h4 { 
- border:0 solid #fff; 
- border-bottom-width:1px;
- padding-bottom:10px;
- text-align: center;
-}
-h6 { 
- border:0 solid #fff; 
- border-bottom-width:1px;
- padding-bottom:5px;
- text-align: center;
-}
-.form-control {
-    border-radius: 10px;
-}
-
-.wrapper {
-    text-align: center;
-}
-
 
 </style>
 
