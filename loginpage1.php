@@ -8,7 +8,7 @@
    exit();
 }
 ?>
-<h4> <b><span class='glyphicon glyphicon-fire'></span> Jerux SHOP - Login</b> </h4>
+<h4> <b><span class=' '></span> Jerux SHOP - Login</b> </h4>
 <div id='errorbox'>
 </div>
 <form method='post' action='loginform.html' class='ajax'>
