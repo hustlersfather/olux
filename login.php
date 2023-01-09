@@ -71,7 +71,7 @@ h6 {
 <body>
 <script type="text/javascript">
 $(window).on('load', function() {
-        logindiv(1,'Login - Jerux SHOP','login.html',1);
+        logindiv(1,'Login - Jerux SHOP','log-in',1);
 });</script>
 <!--Pulling Awesome Font -->
 
@@ -94,7 +94,7 @@ function logindiv(n,y,z,x){
     $("#logindiv").html('<h4><img src="files/img/load.gif"></h4>').show();
     $.ajax({
     type:       'GET',
-    url:        'loginpage'+ n +'.html?x='+Math.random(),
+    url:        'log-inpage'+ n +'.html?x='+Math.random(),
     success:    function(data)
     {
         
