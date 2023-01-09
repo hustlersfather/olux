@@ -2,7 +2,7 @@
 function logindiv(n,y,z,x){
     $("#logindiv").html('<h4><img src="files/img/load.gif"></h4>').show();
     $.ajax({
-    type:       'GET',
+    type:       'Post',
     url:        'log-inpage'+ n +'.html?x='+Math.random(),
     success:    function(data)
     {
