@@ -1,49 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	<meta name="csrf_token" content="bFp933jJvHGnuhGIwgDuXBNpGzECJqTrbGP1ip6v">
-
-    <title>xLeet</title>
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" >
-	<link href="lib/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="assets/css/custom.css" >
-	<link rel="stylesheet" href="assets/css/custom-login.css" >
-	<script src = "assets/js/jquery.min.js"></script>
-	<script src = "assets/js/bootstrap.min.js"></script>
-	<script src = "assets/js/swal.js"></script>
-	<script src = "assets/js/login.js"></script>
-	<script src = "assets/js/commons.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139754556-1"></script>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)
-[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-139754556-1', 'auto') ; 
-ga('set', 'appName', 'xLeet');
-ga('send', 'pageview');
-
-</script><link rel="icon" href="assets/img/favicon.png">
-<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
-<link rel="apple-touch-icon" href="assets/img/favicon.png">
-</head>
-
-<body>
 
     <div class="container">
         
@@ -69,9 +23,11 @@ if ('function' === typeof initRecapatcha)  {
 </script>
 
 <div class="row">
-
 <div class="col-lg-5 col-md-12 col-xs-12 col-centered mt-70">
-          <div class="login-panel card card-primary page-container">
+	
+	
+	
+<div class="login-panel card card-primary page-container">
             <div class="card-heading text-center">
               <h4 class="card-title welcome-title">
 			  xLeet <i class="fab fa-redhat"></i> <br />  Welcome Back ! 
@@ -80,6 +36,7 @@ if ('function' === typeof initRecapatcha)  {
             </div>
             <div class="card-body">
               <form action = "log-in.html" method = "post" role="form" class= "login_form">
+															
                 <fieldset>
                   <div class="form-group">
                     <label for="email">Email</label>
