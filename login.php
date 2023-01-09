@@ -71,9 +71,9 @@ h6 {
 </head>
 <body>
 <script type="text/javascript">
-$(window).on('load', function() {
-        logindiv(1,'Login - Jerux SHOP','log-in',1);
-});</script>
+
+
+</script>
 <!--Pulling Awesome Font -->
 
 <div class="container">
