@@ -10,8 +10,8 @@
    exit();
 }
   $username = mysqli_real_escape_string($dbcon, strip_tags($_POST['user']));
-  $passnotc = mysqli_real_escape_string($dbcon, strip_tags($_POST['pass']));
-  $salt     = 'fs978'; // SALT for encrypting
+  $passnotc = mysqli_real_escape_string($dbcon, strip_tags($_POST['spass']));
+  $salt     = 'f978'; // SALT for encrypting
   $userpass = md5($passnotc . $salt);
   $lvisi = date('Y-m-d');
  $finder = mysqli_query($dbcon, "
