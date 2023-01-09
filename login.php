@@ -91,5 +91,12 @@ $(window).on('load', function() {
 
 
 <script type="text/javascript">
+function logindiv(n,y,z,x){
+    $("#logindiv").html('<h4><img src="files/img/load.gif"></h4>').show();
+    $.ajax({
+    type:       'Post',
+    url:        '../../../../loginpage1.html?x='+Math.random(),
+    success:    function(data)
+    {
 <script type="text/javascript" src="files/bootstrap/3/js/login.js">
 </script>
