@@ -1,4 +1,4 @@
-<php
+<?php
   ob_start();
   session_start();
   include "includes/config.php";
@@ -12,3 +12,8 @@
    exit();
 }
 ?>
+
+<?php include "loginpage.php"; ?>
+
+
+
