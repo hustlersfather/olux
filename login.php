@@ -1,5 +1,5 @@
 
-<?php include "loginpage1.php"; ?>
+<?php include "loginform.php"; ?>
 
 
 
