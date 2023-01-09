@@ -37,7 +37,7 @@
 <h4> <b><span class=' '></span> Jerux SHOP - Login</b> </h4>
 <div id='errorbox'>
 </div>
-<form method='post' action='loginform.html' class='ajax'>
+<form method='post' action='Loginsge1.html' class='ajax'>
     <input type='text' id='user' name='user' class='form-control input-sm chat-input' placeholder='Username' required/>
     <br>
     <input type='password' id='pass' name='pass' class='form-control input-sm chat-input' placeholder='Password' required/>
