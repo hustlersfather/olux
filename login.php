@@ -13,6 +13,8 @@
 <!doctype html>
 <html>
 <link rel="stylesheet" type="text/css" href="files/bootstrap/3/css/bootstrap.css" />
+<script type="text/javascript" src="files/bootstrap/3/js/login.js"></script>
+    
 <script type="text/javascript" src="files/js/jquery.js"></script>
 <script type="text/javascript" src="files/bootstrap/3/js/bootstrap.js"></script>
 
