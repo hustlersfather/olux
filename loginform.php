@@ -23,13 +23,13 @@
      $_SESSION['sname'] = $username;
      $_SESSION['spass'] = $userpass;
 	  $errorbox = "<div class='alert alert-dismissible alert-success'><button type='button' class='close' data-dismiss='alert'>×</button><p>Login successful. Redirecting …</p></div>";
-      echo '{"state":"A","errorbox":"'.$errorbox.'","url":"index.html"}';
+      echo '{"state":"A","faildbox":"'.$faildbox.'","url":"index.php"}';
 	  }else{
 	  $errorbox = "<div class='alert alert-dismissible alert-info'><button type='button' class='close' data-dismiss='alert'>×</button><p>Login failed! Please try again!</p></div>";
-      echo '{"state":"B","errorbox":"'.$errorbox.'","url":"B"}';
+      echo '{"state":"B","faildbox":"'.$faildbox.'","url":"B"}';
     }
   }else{
 	  $errorbox = "<div class='alert alert-dismissible alert-info'><button type='button' class='close' data-dismiss='alert'>×</button><p>Login failed! Please try again!</p></div>";
-      echo '{"state":"C","errorbox":"'.$errorbox.'","url":"C"}';  }
+      echo '{"state":"A","faildbox":"'.$faildbox.'","url":"A"}';  }
   
   ?>
