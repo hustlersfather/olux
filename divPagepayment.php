@@ -29,6 +29,39 @@ $rate = $rate['rate'];
 		$del_transaction = mysqli_query($dbcon, "DELETE FROM payment WHERE p_data='$p_data'");
 	} else {
 ?>
+<?php
+// Start the session and include necessary files
+session_start();
+include "includes/config.php"; // Ensure this file contains your DB connection info
+
+// Assuming you pass the transaction ID or use a session variable
+$transactionId = $_GET['transactionId'] ?? ''; // Or use a session variable
+
+// Fetch the transaction details from the database
+$sql = "SELECT address, amountusd FROM payment WHERE transaction_id = ?";
+$stmt = $dbcon->prepare($sql);
+$stmt->bind_param("s", $transactionId);
+$stmt->execute();
+$result = $stmt->get_result();
+if ($row = $result->fetch_assoc()) {
+    $btcAddress = $row['address'];
+    $amountUSD = $row['amountusd'];
+} else {
+    die("Transaction not found.");
+}
+$stmt->close();
+
+// Display the Bitcoin address and amount
+echo "<h2>Please send your payment to the following Bitcoin address:</h2>";
+echo "<p>Bitcoin Address: <strong>$btcAddress</strong></p>";
+echo "<p>Amount (USD): <strong>$$amountUSD</strong></p>";
+
+// Generate and display QR code
+$qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" . urlencode($btcAddress);
+echo "<p>Scan this QR code with your Bitcoin wallet app to complete the payment:</p>";
+echo "<img src='$qrCodeUrl' alt='QR Code' />";
+?>
+
 <div id="bitcoin">
   <div class="container col-lg-6">
           <h3>Pay using Bitcoin</h3>
