@@ -12,11 +12,10 @@ header("location: ../");
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 $method = mysqli_real_escape_string($dbcon, $_POST['methodpay']);
-$amount = mysqli_real_escape_string($dbcon, htmlspecialchars($_POST['amount'])); if(
-$_POST['methodpay']=="BitcoinPayment"){if (
-$amount < 5) {		echo "01";	
-								}
-									 else 
+$amount = mysqli_real_escape_string($dbcon, htmlspecialchars($_POST['amount'])); 
+
+if($_POST['methodpay']=="BitcoinPayment"){if ($amount < 5) {		echo "01";	= }		 else 
+	
 							{
 
 $url_btc =    'https://blockchain.info/ticker';
@@ -43,14 +42,15 @@ mysqli_query($dbcon, $sql2) or die("error");
 	echo $random; }
 
 } else {
-if($_POST['methodpay']=="PerfectMoneyPayment"){
-		if ($amount < 10) {
+if($_POST['methodpay']=="LitcoinPayment"){
+		if ($amount < 05) {
 		echo "01";
 	} else {
+
 $url_btc =    'https://blockchain.info/ticker';
 $response_btc = file_get_contents($url_btc);
 $object_btc = json_decode($response_btc);
-//print_r($object_btc);
+print_r($object_btc);
 $usdprice = $object_btc->{"USD"}->{"last"};
 $rate['rate'] =  $object_btc->{"USD"}->{"last"};
 $rate = $rate['rate'];
@@ -66,9 +66,7 @@ $zz = json_decode($ao);
 $btcadrs = $zz->data->address;
 $random = substr(md5(mt_rand()), 0, 60);
 $date = date('Y/m/d h:i:s');
-$sql2 = "INSERT INTO payment(user,method,amount,amountusd,address,p_data,state,date) VALUES('$uid','PerfectMoney','$btcamm','$amount','$btcadrs','$random','pending','$date')";
-mysqli_query($dbcon, $sql2);
-echo $random;
-}  }
+$sql2 = "INSERT INTO payment(user,method,amount,amountusd,address,p_data,state,date) VALUES('$uid','Bitcoin','$btcamm','$amount','$btcadrs','$random','pending','$date')";
+mysqli_query($dbcon, $sql2)echo $random;}  }
 else { header("location: index.html"); }}
 ?>
