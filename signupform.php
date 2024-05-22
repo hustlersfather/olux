@@ -77,6 +77,23 @@ db_close();
     <link rel="stylesheet" href="path/to/your/css/style.css"> <!-- Adjust the path to your CSS file -->
 </head>
 <body>
+
+
+    <div class="container">
+        <h1>Register</h1>
+        <?php if (!empty($respond)): ?>
+            <div class="alert alert-<?= htmlspecialchars($respond['type']) ?>">
+                <?= htmlspecialchars($respond['text']) ?>
+            </div>
+            
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="path/to/your/css/style.css"> <!-- Adjust the path to your CSS file -->
+</head>
+<body>
     <div class="container">
         <h1>Register</h1>
         <?php if (!empty($respond)): ?>
@@ -85,10 +102,39 @@ db_close();
             </div>
         <?php endif; ?>
         <form action="register.php" method="POST">
+            
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
             </div>
+            
+            
+            
+            
+            
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required​⬤
+                <input type="password" id="password" name="password" required>
+            </div
+            
+            
+            
+            <div class="form-group">
+                <label for="jabber">Jabber</label>
+                <input type="email" id="jabber" name="jabber" required>
+            </div>
+            
+            
+            
+            
+            <div class="form-group">
+                <label for="captcha">Captcha</label>
+                <input type="text" id="captcha" name="captcha" required>
+                <img src="path/to/captcha/image.php" alt="Captcha Image"> <!-- Adjust the path to your CAPTCHA image script -->
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
+            
